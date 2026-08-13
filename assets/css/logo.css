@@ -1,64 +1,84 @@
 /* ESSI brand header */
-#header > .container { padding-top: 1.5em; }
+#header > .container { padding-top: 1.4em; }
+
+.header-bar {
+	display: flex;
+	align-items: center;
+	gap: 1.35em;
+	min-height: 96px;
+}
 
 #logo {
-	width: 150px;
-	height: 112px;
+	flex: 0 0 92px;
+	width: 92px;
+	height: 92px;
 	margin: 0;
 	font-size: 1em;
 	letter-spacing: 0;
-	text-align: left;
 }
 
 #logo a {
 	display: block;
 	width: 100%;
 	height: 100%;
-	padding: .4em;
+	overflow: hidden;
 	border: 0;
-	border-radius: 8px;
-	background: #fff;
-	box-shadow: 0 8px 28px rgba(0, 0, 0, .18);
+	border-radius: 50%;
+	background: transparent;
 }
 
 #logo img {
 	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
+	object-fit: cover;
+	object-position: center 42%;
+	transform: scale(1.12);
 }
 
-#header > div > p {
-	position: absolute;
-	top: 9em;
-	left: 0;
+#header .company-tagline {
+	flex: 0 1 auto;
+	margin: 0;
+	color: #9bc5d7;
+	font-size: .76em;
+	line-height: 1.5;
+	letter-spacing: .06em;
+	text-align: left;
+	text-transform: uppercase;
 }
 
 #nav {
-	top: 2.4em;
-	left: 210px;
-	right: 0;
+	position: static;
+	flex: 1 0 auto;
+	width: auto;
+	margin-left: auto;
 	text-align: right;
 }
 
-#nav > ul > li { margin-right: 1.65em; }
-#nav > ul > li:last-child { margin-right: 0; }
+#nav > ul > li {
+	padding-right: 1.15em;
+}
+
+#nav > ul > li:last-child { padding-right: 0; }
+#nav > ul > li > a > span { letter-spacing: .08em; }
 
 @media screen and (max-width: 1280px) {
-	#logo { width: 128px; height: 96px; }
-	#header > div > p { top: 8em; }
-	#nav { left: 165px; }
-	#nav > ul > li { margin-right: 1em; }
-	#nav > ul > li > a > span { padding-left: .45em; }
+	.header-bar { gap: 1em; }
+	#logo { flex-basis: 78px; width: 78px; height: 78px; }
+	#header .company-tagline { max-width: 250px; font-size: .68em; }
+	#nav > ul > li { padding-right: .65em; }
+	#nav > ul > li > a:before { margin-right: .4em; }
 }
 
 @media screen and (max-width: 980px) {
-	#logo { width: 112px; height: 84px; margin-left: 3em; }
-	#header > div > p { position: static; margin: .8em 0 0 3.2em; }
+	.header-bar { min-height: 78px; padding-left: 3em; }
+	#logo { flex-basis: 72px; width: 72px; height: 72px; }
+	#header .company-tagline { max-width: none; }
 }
 
 @media screen and (max-width: 736px) {
-	#header > .container { padding-top: 1.25em; }
-	#logo { width: 96px; height: 72px; margin-left: 2.6em; }
-	#header > div > p { margin-left: 3em; font-size: .72em; line-height: 1.5; }
+	#header > .container { padding-top: 1em; }
+	.header-bar { gap: .8em; min-height: 64px; padding-left: 2.6em; }
+	#logo { flex-basis: 60px; width: 60px; height: 60px; }
+	#header .company-tagline { font-size: .58em; line-height: 1.45; }
 }
