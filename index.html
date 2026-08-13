@@ -7,6 +7,7 @@
 		<meta name="description" content="에버수소주식회사는 수소 및 고압 복합재 산업의 시험, 검사, 인증과 글로벌 인허가를 지원합니다." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/company.css" />
+		<link rel="stylesheet" href="assets/css/contact.css" />
 		<link rel="stylesheet" href="assets/css/alignment.css" />
 	</head>
 	<body class="homepage is-preload">
@@ -77,8 +78,21 @@
 
 			<section id="contact">
 				<div class="container contact-box">
-					<div><span class="eyebrow">LET'S WORK TOGETHER</span><h2>수소 산업의 다음 프로젝트를<br />에버수소와 시작하세요.</h2><p>시험, 인증, 인허가 또는 설비 구축에 대한 상담이 필요하신가요?<br />프로젝트에 맞는 최적의 방향을 함께 찾겠습니다.</p></div>
-					<a href="#header" class="button icon solid fa-arrow-up">맨 위로</a>
+					<div class="contact-copy"><span class="eyebrow">LET'S WORK TOGETHER</span><h2>수소 산업의 다음 프로젝트를<br />에버수소와 시작하세요.</h2><p>시험, 인증, 인허가 또는 설비 구축에 대한 상담이 필요하신가요?<br />프로젝트에 맞는 최적의 방향을 함께 찾겠습니다.</p></div>
+					<form class="contact-form" action="https://formspree.io/f/xdendnne" method="POST">
+						<input type="hidden" name="_subject" value="에버수소 홈페이지 신규 문의" />
+						<div class="form-grid">
+							<div class="field"><label for="contact-company">회사명</label><input id="contact-company" type="text" name="company" autocomplete="organization" placeholder="회사명을 입력해 주세요" /></div>
+							<div class="field"><label for="contact-name">담당자명 <span>*</span></label><input id="contact-name" type="text" name="name" autocomplete="name" placeholder="성함을 입력해 주세요" required /></div>
+							<div class="field"><label for="contact-email">이메일 <span>*</span></label><input id="contact-email" type="email" name="email" autocomplete="email" placeholder="name@company.com" required /></div>
+							<div class="field"><label for="contact-phone">연락처</label><input id="contact-phone" type="tel" name="phone" autocomplete="tel" placeholder="010-0000-0000" /></div>
+							<div class="field full"><label for="contact-topic">문의 유형 <span>*</span></label><select id="contact-topic" name="topic" required><option value="" selected disabled>문의 유형을 선택해 주세요</option><option>시험·검사</option><option>인증</option><option>KGS 인허가</option><option>유럽·해외 인허가</option><option>시험설비 구축</option><option>기타</option></select></div>
+							<div class="field full"><label for="contact-message">문의 내용 <span>*</span></label><textarea id="contact-message" name="message" rows="6" placeholder="프로젝트와 필요한 지원 내용을 적어 주세요" required></textarea></div>
+						</div>
+						<input type="text" name="_gotcha" class="form-trap" tabindex="-1" autocomplete="off" aria-hidden="true" />
+						<p class="form-note">보내기를 누르면 입력하신 정보가 문의 답변을 위해 전달됩니다.</p>
+						<button type="submit" class="button icon solid fa-paper-plane">문의 보내기</button>
+					</form>
 				</div>
 			</section>
 
