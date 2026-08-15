@@ -10,7 +10,7 @@
 	var list = document.getElementById('post-list');
 	var count = document.getElementById('post-count');
 	var boardStatus = document.getElementById('board-status');
-	var adminPanel = document.getElementById('admin-panel');
+	var adminDialog = document.getElementById('admin-dialog');
 	var loginView = document.getElementById('login-view');
 	var editorView = document.getElementById('editor-view');
 	var adminStatus = document.getElementById('admin-status');
@@ -105,8 +105,10 @@
 	}
 
 	document.getElementById('admin-toggle').addEventListener('click', function () {
-		adminPanel.hidden = !adminPanel.hidden;
+		adminDialog.showModal();
 	});
+	document.getElementById('admin-close').addEventListener('click', function () { adminDialog.close(); });
+	adminDialog.addEventListener('click', function (event) { if (event.target === adminDialog) adminDialog.close(); });
 
 	document.getElementById('login-form').addEventListener('submit', async function (event) {
 		event.preventDefault();
@@ -142,6 +144,7 @@
 		form.reset();
 		setStatus(adminStatus, '자료가 등록되었습니다.');
 		await loadPosts();
+		window.setTimeout(function () { adminDialog.close(); }, 500);
 	});
 
 	async function deletePost(post) {

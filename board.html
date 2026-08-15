@@ -40,7 +40,9 @@
 						<button id="admin-toggle" class="button small icon solid fa-lock" type="button">관리자</button>
 					</div>
 
-					<section id="admin-panel" class="admin-panel" hidden>
+					<dialog id="admin-dialog" class="admin-dialog">
+					<section id="admin-panel" class="admin-panel">
+						<button id="admin-close" class="dialog-close" type="button" aria-label="관리자 창 닫기">&times;</button>
 						<div id="login-view">
 							<h3>관리자 로그인</h3>
 							<form id="login-form" class="compact-form">
@@ -61,6 +63,7 @@
 						</div>
 						<p id="admin-status" class="status-message" role="status"></p>
 					</section>
+					</dialog>
 
 					<div id="board-status" class="board-status" role="status"></div>
 					<div id="post-list" class="post-list" aria-live="polite"></div>
