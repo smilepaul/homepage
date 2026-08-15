@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>자료실 | 에버수소주식회사</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="에버수소주식회사의 기술자료와 소식을 확인하세요." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/company.css" />
+		<link rel="stylesheet" href="assets/css/logo.css" />
+		<link rel="stylesheet" href="assets/css/board.css" />
+		<link rel="stylesheet" href="assets/css/alignment.css" />
+	</head>
+	<body class="board-page is-preload">
+		<div id="page-wrapper">
+			<section id="header">
+				<div class="container">
+					<div class="header-bar">
+						<h1 id="logo"><a href="index.html" aria-label="ESSI 에버수소 홈"><img src="images/essi-logo.jpg" alt="ESSI EverSuso Inc." /></a></h1>
+						<p class="company-tagline">에버수소주식회사 · Hydrogen Engineering &amp; Global Certification</p>
+						<nav id="nav">
+							<ul>
+								<li><a class="icon solid fa-home" href="index.html"><span>홈</span></a></li>
+								<li><a class="icon solid fa-building" href="index.html#about"><span>회사소개</span></a></li>
+								<li><a class="icon solid fa-cogs" href="index.html#services"><span>사업영역</span></a></li>
+								<li><a class="icon solid fa-globe" href="index.html#partners"><span>글로벌 네트워크</span></a></li>
+								<li class="active"><a class="icon solid fa-folder-open" href="board.html"><span>자료실</span></a></li>
+								<li><a class="icon solid fa-envelope" href="index.html#contact"><span>문의</span></a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="board-hero"><span class="eyebrow">RESOURCE CENTER</span><h2>자료실</h2><p>에버수소의 기술자료와 최신 소식을 확인하세요.</p></div>
+				</div>
+			</section>
+
+			<main class="board-main">
+				<div class="container">
+					<div class="board-toolbar">
+						<div><strong id="post-count">자료를 불러오는 중입니다.</strong><span>최신순으로 표시됩니다.</span></div>
+						<button id="admin-toggle" class="button small icon solid fa-lock" type="button">관리자</button>
+					</div>
+
+					<section id="admin-panel" class="admin-panel" hidden>
+						<div id="login-view">
+							<h3>관리자 로그인</h3>
+							<form id="login-form" class="compact-form">
+								<label for="admin-email">이메일</label><input id="admin-email" type="email" autocomplete="username" required />
+								<label for="admin-password">비밀번호</label><input id="admin-password" type="password" autocomplete="current-password" required />
+								<button class="button" type="submit">로그인</button>
+							</form>
+						</div>
+						<div id="editor-view" hidden>
+							<div class="editor-heading"><h3>새 자료 등록</h3><button id="logout-button" type="button" class="text-button">로그아웃</button></div>
+							<form id="post-form" class="post-form">
+								<label for="post-title">제목 <span>*</span></label><input id="post-title" type="text" maxlength="150" required />
+								<label for="post-content">내용 <span>*</span></label><textarea id="post-content" rows="8" required></textarea>
+								<label for="post-file">첨부파일</label><input id="post-file" type="file" />
+								<label class="check-label"><input id="post-pinned" type="checkbox" /> 상단 공지로 고정</label>
+								<button class="button icon solid fa-upload" type="submit">자료 등록</button>
+							</form>
+						</div>
+						<p id="admin-status" class="status-message" role="status"></p>
+					</section>
+
+					<div id="board-status" class="board-status" role="status"></div>
+					<div id="post-list" class="post-list" aria-live="polite"></div>
+				</div>
+			</main>
+
+			<dialog id="post-dialog" class="post-dialog">
+				<button id="dialog-close" class="dialog-close" type="button" aria-label="닫기">&times;</button>
+				<div id="post-detail"></div>
+			</dialog>
+
+			<section id="footer"><div id="copyright" class="container"><ul class="links"><li>&copy; 에버수소주식회사. All rights reserved.</li><li>Hydrogen Engineering &amp; Global Certification</li></ul></div></section>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+		<script src="assets/js/board.js"></script>
+		<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery.dropotron.min.js"></script><script src="assets/js/browser.min.js"></script><script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
+	</body>
+</html>

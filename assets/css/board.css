@@ -1,0 +1,44 @@
+.board-page #header { min-height: auto; }
+.board-page #header > .container { min-height: auto; padding-bottom: 4.5em; }
+.board-hero { padding: 4.5em 0 0; text-align: left; }
+.board-hero h2 { margin: .25em 0; color: #fff; font-size: 2.8em; letter-spacing: -.04em; }
+.board-hero p { margin: 0; color: #b9d2de; font-size: 1.05em; }
+.board-main { min-height: 55vh; padding: 5em 0 7em; background: #f3f8fb; }
+.board-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 2em; margin-bottom: 1.5em; }
+.board-toolbar strong,.board-toolbar span { display: block; }
+.board-toolbar strong { color: #172c3f; font-size: 1.1em; }
+.board-toolbar span { margin-top: .25em; color: #718695; font-size: .8em; }
+.board-toolbar .button.small { margin: 0; padding: .8em 1.4em; font-size: .8em; }
+.post-list { overflow: hidden; border-top: 2px solid #087bc1; background: #fff; box-shadow: 0 12px 35px rgba(13,65,94,.08); }
+.post-item { display: grid; grid-template-columns: 90px minmax(0,1fr) 130px 80px; align-items: center; gap: 1em; padding: 1.25em 1.5em; border-bottom: 1px solid #e1ebf0; cursor: pointer; transition: background .2s; }
+.post-item:hover { background: #f5fbfd; }
+.post-number { color: #7a8e9a; text-align: center; }
+.post-title { min-width: 0; color: #172c3f; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.post-title .pin { display: inline-block; margin-right: .55em; padding: .2em .5em; border-radius: 3px; background: #087bc1; color: #fff; font-size: .68em; vertical-align: .15em; }
+.post-date,.post-file-mark { color: #718695; font-size: .82em; text-align: center; }
+.post-file-mark i { color: #087bc1; }
+.post-delete { padding: .35em .6em; border: 0; background: transparent; color: #c94343; font-size: .75em; }
+.board-status { padding: 1em 0; color: #657d8b; text-align: center; }
+.admin-panel { margin-bottom: 2em; padding: 2em; border: 1px solid #cfdee6; background: #fff; }
+.admin-panel h3 { margin: 0 0 1em; color: #172c3f; }
+.compact-form,.post-form { display: grid; gap: .8em; max-width: 680px; }
+.compact-form { grid-template-columns: 100px 1fr; align-items: center; }
+.compact-form .button { grid-column: 2; margin: .5em 0 0; }
+.admin-panel label { color: #314a5b; font-size: .82em; font-weight: 700; }
+.admin-panel input,.admin-panel textarea { margin: 0; border: 1px solid #cbdbe3; background: #f8fbfc; box-shadow: none; }
+.post-form label span { color: #d94848; }
+.post-form .button { justify-self: start; margin-top: .5em; }
+.check-label { display: flex; align-items: center; gap: .55em; }
+.check-label input { width: auto; }
+.editor-heading { display: flex; align-items: center; justify-content: space-between; max-width: 680px; }
+.text-button { border: 0; background: transparent; color: #087bc1; font-weight: 700; }
+.status-message { margin: 1em 0 0; color: #087bc1; font-size: .85em; }
+.post-dialog { width: min(760px,calc(100% - 2em)); max-height: 85vh; padding: 2.5em; border: 0; border-radius: 6px; box-shadow: 0 25px 80px rgba(0,0,0,.25); }
+.post-dialog::backdrop { background: rgba(4,19,35,.72); }
+.dialog-close { position: absolute; top: .6em; right: .8em; border: 0; background: transparent; color: #637785; font-size: 2em; line-height: 1; }
+.detail-meta { margin: .6em 0 2em; color: #728695; font-size: .82em; }
+.detail-content { min-height: 120px; white-space: pre-wrap; line-height: 1.9; }
+.detail-file { margin-top: 2em; padding: 1em; background: #f1f7fa; }
+.detail-file a { border: 0; color: #087bc1; font-weight: 700; }
+@media screen and (max-width:1280px){.board-page #nav>ul>li{padding-right:.35em}.board-page #nav>ul>li>a>span{font-size:.75em}.board-page #header .company-tagline{max-width:205px}}
+@media screen and (max-width:736px){.board-hero{padding-top:3em}.board-hero h2{font-size:2em}.board-main{padding:3em 0 5em}.post-item{grid-template-columns:1fr auto;padding:1em}.post-number{display:none}.post-date{grid-column:1;text-align:left}.post-file-mark{grid-column:2;grid-row:1/3}.admin-panel{padding:1.25em}.compact-form{grid-template-columns:1fr}.compact-form .button{grid-column:auto}.post-dialog{padding:2em 1.25em}}
