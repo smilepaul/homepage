@@ -1,8 +1,8 @@
 (function () {
 	'use strict';
 
-	var SUPABASE_URL = 'https://ncggnnalnlbpxkweknda.supabase.co';
-	var SUPABASE_KEY = 'sb_publishable_WHC6x2pYjkUHgGTStfDxJg_xooy-FUR';
+	var SUPABASE_URL = 'https://frizcdsfqeubhojmcbbf.supabase.co';
+	var SUPABASE_KEY = 'sb_publishable_vL5Kp70yuGQO5mX41OX4kw_AvD4WkSZ';
 	var client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 	var posts = [];
 	var currentUser = null;
